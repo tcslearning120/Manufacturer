@@ -18,15 +18,16 @@ import com.example.demo.entity.Component;
 
 import com.example.demo.service.ComponentService;
 
-
 @RestController
 public class ComponentController {
 	@Autowired
 	ComponentService componentService;
+
 	@GetMapping("/component/{id}")
-	Optional<Component>getComponents(@PathVariable("id") Integer id){
-	   return componentService.getcomponent(id);
+	Optional<Component> getComponents(@PathVariable("id") Integer id) {
+		return componentService.getcomponent(id);
 	}
+
 	@PostMapping("/component")
 	@ResponseStatus(code = HttpStatus.CREATED)
 	void creatComponent(@RequestBody @Valid Component component) {
@@ -37,4 +38,5 @@ public class ComponentController {
 	void deleteComponent(@PathVariable("id") Integer id) {
 		componentService.deleteComponent(id);
 	}
+
 }

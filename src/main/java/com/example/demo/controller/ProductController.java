@@ -32,7 +32,7 @@ Optional<Product>getProducts(@PathVariable("productId") Integer productId){
 @PostMapping("/product")
 @Transactional
 @ResponseStatus(code = HttpStatus.CREATED)
-void creatProduct(@RequestBody @Valid Product product) {
+void creatProduct(@RequestBody  Product product) {
 	productService.saveProduct(product);
 }
 

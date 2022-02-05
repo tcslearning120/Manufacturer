@@ -32,4 +32,7 @@ public class ComponentService {
 
 		componentRepository.deleteById(id);
 	}
+
+	
+	
 }
